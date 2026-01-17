@@ -1,0 +1,92 @@
+{
+  "scopeName": "source.round-el",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#functions" },
+    { "include": "#keywords" },
+    { "include": "#brackets" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.round-el",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.round-el",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.round-el",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.round-el",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.round-el",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.round-el",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.multi.round-el",
+          "begin": "\"\"\"",
+          "end": "\"\"\""
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.round-el",
+          "match": "\\b(if|else|for|while|break|continue|return|and|or)\\b"
+        },
+        {
+          "name": "keyword.other.round-el",
+          "match": "\\b(import)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function",
+          "match": "\\b(to_timestamp|to_unix_timestamp|parse_date|parse_local_datetime|date_format|print|printf|println|printi|interpolate|rand|randi|choose|uuid|uuid32|uuid36|reverse)\\b"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.bracket.round.el.round-el",
+          "match": "\\(|\\)"
+        },
+        {
+          "name": "punctuation.bracket.square.el.round-el",
+          "match": "\\[|\\]"
+        },
+        {
+          "name": "punctuation.bracket.curly.el.round-el",
+          "match": "\\{|\\}"
+        }
+      ]
+    }
+  }
+}
