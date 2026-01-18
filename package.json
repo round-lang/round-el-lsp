@@ -1,24 +1,23 @@
 {
 	"name": "round-el-lsp",
 	"description": "A language server for the Round El programming language",
-	"author": "Microsoft Corporation",
+	"author": "Jerry Will",
 	"license": "MIT",
 	"version": "1.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/round-lang/round-el"
 	},
-	"publisher": "vscode-samples",
+	"publisher": "jrrwll",
 	"categories": [],
 	"keywords": [
-		"multi-root ready"
+		"round-el",
+		"language-server"
 	],
 	"engines": {
 		"vscode": "^1.100.0"
 	},
-	"activationEvents": [
-		"onLanguage:round-el"
-	],
+
 	"main": "./client/out/extension",
 	"contributes": {
 		"languages": [
